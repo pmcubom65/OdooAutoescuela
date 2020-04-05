@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report 
+		id="report_autoescuela"
+        string="Informe de la Autoescuela"
+		model="autoescuela.autoescuela"
+        report_type="qweb-pdf"
+		name="autoescuela_pedro.autoescuela_template"
+	/>
+
+
+	  <report 
+		id="report_profesor"
+        string="Informe del Profesor"
+		model="profesor.profesor"
+        report_type="qweb-pdf"
+		name="autoescuela_pedro.profesor_template"
+	/>
+
+		  <report 
+		id="report_alumno"
+        string="Informe del Alumno"
+		model="pedro.pedro"
+        report_type="qweb-pdf"
+		name="autoescuela_pedro.pedro_template"
+	/>
+
+
+
+
+		  <report 
+		id="report_examen"
+        string="Informe de Examen"
+		model="examen.examen"
+        report_type="qweb-pdf"
+		name="autoescuela_pedro.examen_template"
+	/>
+
+
+
+</odoo>
+	
+	
+	

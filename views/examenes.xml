@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<odoo> 
+	<record id="examen_dep_form_view" model="ir.ui.view">
+        <field name="name">examen.examen.form</field>
+        <field name="model">examen.examen</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Examenes">
+				<group>
+                    <field name="name"/>
+                    <field name="fecha"/>
+                    <field name="alumno_id"/>
+                    <field name="examen_autoescuela_ids" widget="many2many_tags"/>
+                    <field name="precio"/>
+                    <field name="moneda_id"/>
+                    <field name="clases"/>
+                    <field name="carnet"/>
+                    <field name="aprobado"/>
+                </group>
+               
+            </form>
+        </field>
+    </record>
+	
+	<record id="examen_dep_tree_view" model="ir.ui.view">
+        <field name="name">examen.examen.form</field>
+        <field name="model">examen.examen</field>
+        <field name="arch" type="xml">
+			<tree>
+                    <field name="name"/>
+                    <field name="fecha"/>
+                    <field name="alumno_id"/>
+                    <field name="examen_autoescuela_ids" widget="many2many_tags"/>
+                    <field name="precio"/>
+                    <field name="moneda_id"/>
+                    <field name="clases"/>
+                    <field name="carnet"/>
+                    <field name="aprobado"/>
+            </tree>
+            
+        </field>
+    </record>
+			
+    <record model="ir.actions.act_window" id="act_examen_gestor">
+        <field name="name">Examenes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">examen.examen</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo> 
+

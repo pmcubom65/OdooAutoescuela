@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+ir_hhrr1,Recursos Humanos1,model_autoescuela_autoescuela,,1,1,1,1
+ir_hhrr2,Recursos Humanos2,model_profesor_profesor,,1,1,1,1
+ir_hhrr3,Recursos Humanos3,model_pedro_pedro,,1,1,1,1
+ir_hhrr4,Recursos Humanos4,model_examen_examen,,1,1,1,1

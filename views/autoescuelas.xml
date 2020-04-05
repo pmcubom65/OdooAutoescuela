@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<odoo> 
+	<record id="autoescuela_dep_form_view" model="ir.ui.view">
+        <field name="name">autoescuela.autoescuela.form</field>
+        <field name="model">autoescuela.autoescuela</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Autoescuela">
+				<group>
+                    <field name="name"/>
+                    <field name="domicilio"/>
+                    <field name="localidad"/>
+                    <field name="provincia"/>
+                    <field name="contacto"/>
+                    <field name="examen_id" widget="many2many_tags"/>
+                </group>
+               
+            </form>
+        </field>
+    </record>
+	
+	<record id="autoescuela_dep_tree_view" model="ir.ui.view">
+        <field name="name">autoescuela.autoescuela.form</field>
+        <field name="model">autoescuela.autoescuela</field>
+        <field name="arch" type="xml">
+			<tree>
+                    <field name="name"/>
+                    <field name="domicilio"/>
+                    <field name="localidad"/>
+                    <field name="provincia"/>
+                    <field name="contacto"/>
+            </tree>
+            
+        </field>
+    </record>
+			
+    <record model="ir.actions.act_window" id="act_dep_gestor">
+        <field name="name">Autoescuelas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">autoescuela.autoescuela</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo> 
+

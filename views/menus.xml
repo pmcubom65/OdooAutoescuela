@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<odoo> 
+	<!--  Declaramos los menu --> 
+	<menuitem id="emp_gestor_menu" name="Gestor de la autoescuela" sequence="1" web_icon="gestor,static/description/icon.png"/>
+	
+	<menuitem id="submenu_ej_gestor_pri" name="Opciones de la autoescuela" sequence="10" parent="emp_gestor_menu"/>
+		
+	<menuitem id="submenu_ej_gestor_dep_action" name="Autoescuelas" sequence="20" parent="submenu_ej_gestor_pri" action="act_dep_gestor"/>
+		
+	<menuitem id="submenu_ej_gestor_empydep_action" name="Profesores" sequence="40" parent="emp_gestor_menu" action="act_profesor_gestor"/>
+
+
+	<menuitem id="submenu_ej_gestor_empydep2_action" name="Alumnos" sequence="40" parent="emp_gestor_menu" action="act_alumno_gestor"/>
+
+
+
+	<menuitem id="submenu_ej_gestor_empydep3_action" name="Examenes por Alumno" sequence="40" parent="emp_gestor_menu" action="act_examen_gestor"/>
+
+
+</odoo> 

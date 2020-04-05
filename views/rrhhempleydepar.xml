@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<odoo> 
+	<record id="empleadoydep_form_view" model="ir.ui.view">
+        <field name="name">emp.reldepyemp.form</field>
+        <field name="model">emp.reldepyemp</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Profesores y autoescuelas">
+                <group>
+                    <field name="empleado"/>
+				</group>
+                      
+				<group>
+                    <field name="departamento"/>
+				</group>
+            </form>
+        </field>
+    </record>
+	
+	<record id="empleadoydep_tree_view" model="ir.ui.view">
+        <field name="name">emp.reldepyemp.form</field>
+        <field name="model">emp.reldepyemp</field>
+        <field name="arch" type="xml">
+			<tree>
+                <field name="empleado"/>
+                <field name="departamento"/>
+        	</tree>
+        </field>
+    </record>
+	
+		
+    <record model="ir.actions.act_window" id="act_empydep_gestor">
+        <field name="name">Gestor de la autoescuela</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">emp.reldepyemp</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo> 
+

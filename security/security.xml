@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="grupo_autoescuela" model="res.groups">
+            <field name="name">autoescuelaadmin</field>
+            <field name="comment">Gestor de autoescuela</field>
+        </record>
+    </data>
+</odoo>
+

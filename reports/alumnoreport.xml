@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="pedro_template">
+        <t t-call="web.html_container">
+            <div class="header" style="border-bottom: 2px solid black">
+                <h3 class="text-center">Informe del Alumno</h3>
+            </div>
+			
+            <div class="article">
+                <table class="table table-condensed table-bordered" style="width: 100%">
+                    <thead>
+                        <th class="text-center" style="width: 25%">Nombre</th>
+                        <th class="text-center" style="width: 12%">DNI</th>
+                        <th class="text-center" style="width: 12%">Matricula</th>
+                        <th class="text-center" style="width: 25%">Domicilio</th>
+                       <th class="text-center" style="width: 25%">Autoescuela</th>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="doc">
+                            <tr  class="text-center" >
+                                <td>
+                                    <t t-esc="doc.name"/>
+                                   
+                                </td>
+                                <td>
+                                    <t t-esc="doc.dni"/>
+                                </td>
+                                <td>
+                                    <t t-esc="doc.matricula"/>
+                                </td>
+                                <td>
+                                    <t t-esc="doc.domicilio"/>
+                                </td>
+
+                                <td>
+                                <t t-foreach="request.env['autoescuela.autoescuela'].search([])" t-as="obj">
+
+                                    <t t-if="obj==doc.autoescuela_id"><t t-esc="obj.name"/></t>
+                                   
+                                    </t>
+                                </td>
+                                                                                             
+                            </tr>
+
+                            <tr class="text-center" >
+                                <td colspan="5"><h4>Profesor habitual del alumno</h4></td>
+                            </tr>
+                            <tr class="text-center" >
+                        <td class="text-center" style="width: 25%">Nombre</td>
+                        <td class="text-center" style="width: 15%">DNI</td>
+                        <td class="text-center" style="width: 10%">Coche</td>
+                        <td class="text-center" style="width: 25%">Matricula</td>
+                        <td class="text-center" style="width: 25%">Autoescuela</td>
+
+                            </tr>
+                            <tr class="text-center" >
+
+                            <td>
+                                <t t-foreach="request.env['profesor.profesor'].search([])" t-as="profe">
+
+                                    <t t-if="profe==doc.profesor_id"><t t-esc="profe.name"/></t>
+                                   
+                                 </t>   
+                            </td>
+
+                            <td>
+                                <t t-foreach="request.env['profesor.profesor'].search([])" t-as="profe">
+                                <t t-if="profe==doc.profesor_id"><t t-esc="profe.dni"/></t>
+                            </t>
+                            </td>
+                            <td>
+                                <t t-foreach="request.env['profesor.profesor'].search([])" t-as="profe">
+                                <t t-if="profe==doc.profesor_id"><t t-esc="profe.coche"/></t>
+                            </t>
+                            </td>
+                            <td>
+                                <t t-foreach="request.env['profesor.profesor'].search([])" t-as="profe">
+                                <t t-if="profe==doc.profesor_id"><t t-esc="profe.matricula"/></t>
+                            </t>
+                            </td>
+                             <td>
+                                <t t-foreach="request.env['autoescuela.autoescuela'].search([])" t-as="obj">
+
+                                    <t t-if="obj==doc.autoescuela_id"><t t-esc="obj.name"/></t>
+                                   
+                                    </t>
+                                </td>
+
+                            </tr>
+
+                                
+
+                                
+
+
+
+                        </t>
+                    </tbody>
+                </table>
+
+       
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+			
+            <div class="footer">
+                <div class="row text-center" style="border-top: 1px solid black;">
+                    <div class="col col-3 offset-9 text-right">
+                        <ul class="list-inline mt-2">
+                            <li class="list-inline-item">Página:</li>
+                            <li class="list-inline-item">
+                                <span class="page"/>
+                            </li>
+                            <li class="list-inline-item">/</li>
+                            <li class="list-inline-item">
+                                <span class="topage"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
+

@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+ir_hhrr1,Recursos Humanos1,model_emp_emp,gestorrhh.grupo_rrhh_personalizado,1,1,1,1
+ir_hhrr2,Recursos Humanos2,model_emp_dept,gestorrhh.grupo_rrhh_personalizado,1,1,1,1
+ir_hhrr3,Recursos Humanos3,model_emp_reldepyemp,gestorrhh.grupo_rrhh_personalizado,1,1,1,1
